@@ -42,7 +42,7 @@ namespace FikaAmazonAPI.Search
                     string output = "";
                     if (PropertyType == typeof(DateTime) || PropertyType == typeof(Nullable<DateTime>))
                     {
-                        output = ((DateTime)value).ToString(Constants.DateISO8601Format);
+                        output = ((DateTime)value).ToString(Constants.DateISO8601Format, System.Globalization.CultureInfo.InvariantCulture);
                     }
                     else if (propTypeName == typeof(String).Name)
                     {
